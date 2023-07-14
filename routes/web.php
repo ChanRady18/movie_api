@@ -13,6 +13,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
+Route::get('/movie/index',[\App\Http\Controllers\MovieController::class,'index']);
+Route::get('/greeting', function () {
+    return 'Hello World';
 });
